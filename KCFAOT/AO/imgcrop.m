@@ -1,0 +1,11 @@
+function p=imgcrop(I,R)
+[m,n,k]=size(I);
+x0=R(2);
+y0=R(1);
+x1=R(2)+R(4)-1;
+y1=R(1)+R(3)-1;
+if (x0<1) x0=1;end
+if (y0<1) y0=1;end
+if (x1>m) x1=m;end    
+if (y1>n) y1=n;end
+p=I(x0:x1,y0:y1,1:k);
